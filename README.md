@@ -2,6 +2,14 @@ HTG_v4c_advance
 ===============
 
 Tasker profile for videoreg
+
+Version 1.2
+Change: Gave car-mode profile higher priority.
+Change: Made “save on 3” task, capture a picture and “say” what action has been performed.
+Added: Triggers for “widget locker” and ”poweramp” to be launched when entering car-mode. (If you don’t have these programs, you may delete these triggers).
+Added: The v4c profile now checks for a “phone call” state, so that it natively stops during a call, and doesn’t just wait for the profile to be disabled by the “phone call” profiles.
+
+
 Version 1.1a - moved to github.
 
 Version 1.1 -	Bugfix – Receiving a call re-enables video recording, regardless of if it was disabled manually.

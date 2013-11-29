@@ -3,6 +3,15 @@ HTG_v4c_advance
 
 Tasker profile for videoreg
 
+v1.3
+Fixed: task "videoreg toggler" incorrectly toggling the “on phone”
+profiles on incoming call, causing the post call delay to not work.
+Changed: "videoreg toggle" task to have debugging msgs if “debug”
+variable contains “v4c”.
+Changed: "videoreg toggle" to have a larger delay after ending a call.
+Added: variable “HTG_CAR_TALK”, to toggle verbal feedback.
+Changed: Increased verbal feedbacks.
+
 Version 1.2
 Fixed: task "videoreg toggler" incorrectly toggling the “on phone” profiles on incoming call, causing the post call delay to not work.
 Changed: "videoreg toggle" task to have debugging msgs if “debug” variable contains “v4c”.

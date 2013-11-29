@@ -3,6 +3,21 @@ HTG_v4c_advance
 
 Tasker profile for videoreg
 
+v1.4
+Behavior change: VideoReg is no longer stopped when a phone call is in progress.
+Pre v1.4, the car mode profile was set to disable video recording during a phone call. This was done to reduce the interruption of a conversation, when the video clip rotated as the media route would toggle between the internal speacker+mic to the BT one. 
+With the above stated, many changes were introduced to indeed keep the video recording toggle outside of the 10m interval.
+
+Assumption change: From v1.4 and beyond, it is assumed that Videoreg is set to make longer intervals between clips (I use 10m), so that the media toggle would normally happen outside of the regular duration of a call and/or would be not as disruptive to the conversation. 
+Added: “Reset Record” profiles that restart the video recording, so that it would get the full 10 minutes count when a phone call is ongoing. The reset is triggered by: opening the phone app, receiving/making a call, answering a call and a very long “save on 3”.
+Added: “Convert app to event” profile, that overcomes the ambiguity of when did the “Samsung phone” app started as it lingers in memory and prevents Tasker from clearly defining its state. I’ve later used it for the exDialer app, just to preserve behavior consistency.
+Added: Cooldown variable to serve as a common back-off bus for tasks.
+Changed: “Save on 3” now also resets the video recording if held for longer than 5 seconds.
+Changed: If a restart recording was triggered by a long “save on 3”, there is a “say” notification.
+Fixed: v4c toggler was not toggeling all the new profiles created post v1.3
+Changed: Video recording profile now stops if power is les then 25%.
+Added: When Video recording is started, it first checks there is at least 35% power.
+
 v1.3
 Fixed: task "videoreg toggler" incorrectly toggling the “on phone”
 profiles on incoming call, causing the post call delay to not work.
